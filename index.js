@@ -89,4 +89,5 @@ function setFinalMessage() {
 }
 console.log(setFinalMessage());
 
-  
+
+  console.log('Hello world');
