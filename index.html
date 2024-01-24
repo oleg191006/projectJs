@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+    .hidden{
+      display: none;
+    }
+  </style>
   
-    <title>Game🎮</title>
-    <style>
-    
-      </style>
-      </head>
-    <body>
-    
-      <p></p>
-    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <span style="color:yellow;">Rock</span>
+    -
+    <span style="color:rgba(163, 214, 255, 0.74);">Paper</span>
+    -
+    <span style="color:red;">Scissors</span>
+    <title>Rock Paper Scissors</title>
 </head>
-<body>
+<body style="background:purple">
+  <div id="result" class="hidden"></div>
+
+    <!-- Game instructions -->
+    <div id="instructions">
+        <p>The first to score 5 points wins</p>
+    </div>
+
+    <!-- Buttons for player choices -->
+    <button onclick="setPlayerSelection('rock')"><img width="100" height="auto" src="rock-font.png" alt="rock-font" style="box-shadow: 0px 0px 70px rgb(251, 255, 0);border-radius: 100%;"></button>
+    <button onclick="setPlayerSelection('paper')"><img width="100" height="auto" src="paper-font.png" alt="paper-font" style="box-shadow: 0px 0px 70px rgb(0, 81, 255);border-radius: 100%;"></button>
+    <button onclick="setPlayerSelection('scissors')"><img width="100" height="auto" src="scissors-font.png" alt="scissors-font" style="box-shadow: 0px 0px 70px rgb(255, 0, 17);border-radius: 100%;"></button>
+<div id="diiv"></div>
+
     <script src="index.js"></script>
-    <script>
-
-    </script>
-
-    <h1></h1>
-    
 </body>
 </html>
