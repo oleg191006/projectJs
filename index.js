@@ -36,43 +36,57 @@ function playRound(playerSelection) {
 function showMessage(message) {
     hideResult(); // Сховуємо результати перед виведенням нового повідомлення
     resultDiv.textContent = message;
+   
 }
+const res=document.getElementById('results-table');
+res.style.marginTop='40px';
+res.style.fontSize='33px';
+res.classList.add('resColor');
 
 function updateScores() {
     const instructionsDiv = document.getElementById('instructions');
     instructionsDiv.innerHTML = `<p>Player: ${playerScore} | Computer: ${computerScore}</p>`;
-    instructionsDiv.style.color = "green";
+    instructionsDiv.style.color = "pink";
+    instructionsDiv.style.margin='-100px';
+    instructionsDiv.style.marginLeft='650px';
+    instructionsDiv.style.marginTop='0px';
+    instructionsDiv.style.fontSize='26px'
 }
 
 function checkWinner() {
     if (playerScore === 5) {
-        alert('Congratulations! You won the game!');
-        resetGame();
+        res.textContent='Congratulations! You won the game!';
+        res.classList.remove('hidden');
+        res.style.color='gold';
     } else if (computerScore === 5) {
-        alert('Oops! You lost the game. Try again!');
-        resetGame();
+        res.textContent='Oops! You lost the game. Try again!';
+        res.classList.remove('hidden');
+        res.style.color='red';
     }
+  
 }
 
 function showResult(message) {
     resultDiv.innerHTML = message;
     resultDiv.style.padding = '50px';
-    resultDiv.classList.remove('hidden');
+    
 }
 
 function hideResult() {
     resultDiv.innerHTML = '';
-    resultDiv.style.padding = '0';
-    resultDiv.classList.add('hidden');
+    resultDiv.style.padding = '1000';
+   
 }
 
 function resetGame() {
     playerScore = 0;
     computerScore = 0;
     updateScores();
-    showMessage('Let\'s play again!');
-    hideResult();
+    res.classList.add('hidden');
+    
 }
+const newGame=document.getElementById('playAgain');
+newGame.addEventListener('click',resetGame);
 
 initializeGame();
 

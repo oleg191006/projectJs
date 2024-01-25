@@ -42,3 +42,17 @@ button:hover {
 .hidden{
     display:none;
 }
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.button-container button {
+    margin: 0 10px;
+    flex: 1; /* Рівномірний розподіл простору між кнопками */
+}
+.resColor{
+    background: linear-gradient(to right, #4c00ff, #00ff84);
+}
