@@ -1,58 +1,175 @@
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+*{
+    box-sizing: border-box;
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2;
+    padding: 0;
 }
 
-#result {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
-}
-
-#instructions {
-    background: linear-gradient(to bottom, #ffcc00, #66ccff);
-    width: 210px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #ddd;
-}
-.hidden{
-    display:none;
-}
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body{
+    width:100%;
     height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.button-container button {
-    margin: 0 10px;
-    flex: 1; /* Рівномірний розподіл простору між кнопками */
+.container{
+    width: 70%;
+    height:90vh;
+   position: relative;
+   overflow: hidden;
+
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
-.resColor{
-    background: linear-gradient(to right, #4c00ff, #00ff84);
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('scissors.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.56;
+    /* Прозорість фону */
+    z-index: -1;
+    /* Псевдоелемент знаходиться за іншим контентом */
+}
+
+
+
+
+.game-name{
+    width:fit-content;
+    height:fit-content;
+    padding: 25px;
+}
+
+.game-name span{
+    font-size: 68px;
+}
+
+.span-rock{
+    color:rgb(255, 255, 0);
+}
+
+.span-paper{
+    color:rgb(0, 51, 255);
+}
+
+.span-scissors{
+    color:rgb(255, 50, 50);
+}
+
+.game-rules{
+    padding-top: 20px;
+}
+
+.game-rules .instructions{
+    font-size:36px;
+    color:rgb(239, 39, 155);
+}
+
+.game-result{
+    width: 800px;
+    height:90px;
+    margin-top:55px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-board{
+    width:300px;
+    height:70px;
+    margin: 30px 0 80px 0;
+}
+
+.weapon-choose{
+    width:70%;
+    height: 28%;
+  
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+}
+
+.weapon-choose img{
+    width:250px;
+}
+
+.weapon-choose button{
+width:250px;
+height: 250px;
+border-radius:50%;
+border:none;
+cursor: pointer;
+
+}
+
+.weapon-choose .rock{
+box-shadow: 5px 5px 70px rgb(251, 255, 0);
+}
+
+.weapon-choose .paper{
+    box-shadow: 5px 5px 70px rgb(0, 81, 255)
+}
+
+.weapon-choose .scissors{
+    box-shadow: 5px 5px 70px rgb(255, 0, 17)
+}
+
+
+
+.game-result .res{
+font-size: 50px;
+color:white;
+}    
+
+.score-board{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.start-game{
+    width:400px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.start-game .reset{
+    width:200px;
+    height: 50px;
+    border:none;
+    font-weight: bold;
+    font-size: 26px;
+    color:rgb(0, 46, 110);
+    border-radius: 15px;
+    cursor: pointer;
+    background: rgb(229, 255, 0);
+    transition: 0.5s;
+}
+
+.start-game .reset:hover{
+    transition: 0.5s;
+    background: rgba(229, 255, 0, 0.558);
+}
+
+.papper{
+    position: absolute;
+    align-self: flex-end;
+    bottom: 35px;
+    margin-left: 69px;
+    font-size: 56px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(0, 0, 141)
 }

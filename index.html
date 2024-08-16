@@ -1,59 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <style>
-    .hidden{
-      display: none;
-    }
-  </style>
-  
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <span style="color:yellow;margin-left: 670px; font-size: 26px;">Rock-</span>
-    
-    <span style="color:rgba(163, 214, 255, 0.74);margin-left:0px; font-size: 26px;">Paper-</span>
-    
-    <span style="color:red;margin-left: 0px;font-size: 26px;">Scissors</span>
-    <title>Rock Paper Scissors</title>
-</head>
-<body style="background:purple;margin-top: 20px;">
-  <table id="results-table" style="margin-left: 550px;margin-top: 0px;">
-    <thead>
-      <tr>
-      </tr>
-  </thead>
-  <tbody>
-      <!-- Results will be dynamically added here -->
-  </tbody>
-
-
-  </table>
-
-  <div id="result" style="color:chartreuse;margin:60px 100px 100px 630px ;   font-size: 26px;"></div>
-
-    <!-- Game instructions -->
-    <div id="instructions" style="margin-left:600px;margin-top:-10px;">
-        <p style="width: 100;color: orangered;font-size: 26px;">The first to score 5 points wins</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-name">
+        <span class="span-rock">Rock -</span>
+        <span class="span-paper">Paper -</span>
+        <span class="span-scissors">Scissors</span>
+      </div>
+      <div class="game-rules">
+        <p class="instructions">
+          <strong>The first to score 5 points wins</strong>
+        </p>
+      </div>
+      <div class="game-result">
+        <p class="res"></p>
+      </div>
+      <div class="score-board">
+        <p class="board"></p>
+      </div>
+      <div class="weapon-choose">
+        <button class="rock" onclick="setPlayerSelection('Rock')">
+          <img src="rock-font.png" alt="" />
+        </button>
+        <button class="paper" onclick="setPlayerSelection('Paper')">
+          <img src="paper-font.png" alt="" />
+        </button>
+        <button class="scissors" onclick="setPlayerSelection('Scissors')">
+          <img src="scissors-font.png" alt="" />
+        </button>
+      </div>
+      <div class="start-game">
+        <button class="reset">RESET</button>
+        <p class="papper">PAPER</p>
+      </div>
     </div>
-
-    <!-- Buttons for player choices -->
-    <div class="button-container" style="margin-top: 200px;">
-      <button onclick="setPlayerSelection('rock')" style="margin-left: 530px;">
-          <img width="150px" height="auto" src="rock-font.png" alt="rock-font" style="box-shadow: 0px 0px 70px rgb(251, 255, 0);border-radius: 100%; ">
-      </button>
-      <button onclick="setPlayerSelection('paper')">
-          <img width="150" height="auto" src="paper-font.png" alt="paper-font" style="box-shadow: 0px 0px 70px rgb(0, 81, 255);border-radius: 100%;">
-      </button>
-      <button onclick="setPlayerSelection('scissors')">
-          <img width="150" height="auto" src="scissors-font.png" alt="scissors-font" style="box-shadow: 0px 0px 70px rgb(255, 0, 17);border-radius: 100%;">
-      </button>
-  </div>
-  <div id="diiv"></div>
-  <button id="playAgain" style="margin-left: 710px; margin-top:40px;width: 10%; height: 50px;border-radius: 50%;background: linear-gradient(to right, #4c00ff, #00ff84);">New game</button>
-  
-
-    <script src="index.js"></script>
-</body>
+  </body>
+  <script src="script.js"></script>
 </html>
