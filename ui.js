@@ -1,4 +1,5 @@
 // ui.js
+
 const pRes = document.querySelector('.res');
 const boardScore = document.querySelector('.board');
 
