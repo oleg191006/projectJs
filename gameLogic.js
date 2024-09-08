@@ -5,6 +5,8 @@ import { updateScores, showMessage } from './ui.js';
 let playerScore = 0;
 let computerScore = 0;
 
+
+
 export function playRound(humanChoice) {
     const computerChoice = arrWeapon[Math.floor(Math.random() * arrWeapon.length)];
 
